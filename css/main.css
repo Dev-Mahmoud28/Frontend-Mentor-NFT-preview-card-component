@@ -1,0 +1,131 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: hsl(217, 54%, 11%);
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px 14px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 8px;
+}
+.container .equilibrium{
+  width: 276px;
+  height: 276px;
+  position: relative;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.container .equilibrium::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(hsl(178, 100%, 50%), hsl(178, 100%, 50%));
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+.container .equilibrium .eye{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.container .equilibrium img{
+  width: 100%;
+  border-radius: 8px;
+}
+.container .equilibrium:hover::before{
+  opacity: 50%;
+}
+.container .equilibrium:hover .eye{
+  opacity: 1;
+}
+.container .text{
+  color: white;
+  margin-top: 20px;
+  margin-left: 5px; 
+}
+.container .text h3{
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 0 0 10px;
+  width: fit-content;
+}
+.container .text h3:hover{
+  color: hsl(178, 100%, 50%);
+}
+.container .text p{
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+}
+.container .icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.container .icons .diamond{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: hsl(178, 100%, 50%);
+}
+.container .icons .time{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container .icons .time span{
+  color: hsl(215, 51%, 70%);
+}
+.container .footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+  margin-left: 5px;
+  position: relative;
+}
+.container .footer p{
+  color: hsl(215, 51%, 70%);
+}
+.container .footer p span{
+  color: hsl(0, 0%, 100%);
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.container .footer p span:hover{
+  color: hsl(178, 100%, 50%);
+}
+.container .footer .avatar{
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
